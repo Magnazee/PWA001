@@ -8,9 +8,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: [
-        'icons/icon-144.png'
-      ],
+      includeAssets: ['icons/*'],
       manifest: {
         name: 'Rainbow Hello World PWA',
         short_name: 'Rainbow PWA',
@@ -18,58 +16,46 @@ export default defineConfig({
         theme_color: '#4B0082',
         background_color: '#000000',
         display: 'standalone',
-        orientation: 'any',
-        start_url: '/PWA001/',
-        scope: '/PWA001/',
-        id: '/PWA001/',
+        start_url: '.',
         icons: [
           {
-            src: '/PWA001/icons/icon-144.png',
-            sizes: '144x144',
-            type: 'image/png',
+            src: './icons/icon-192.svg',
+            sizes: '192x192',
+            type: 'image/svg+xml',
             purpose: 'any'
+          },
+          {
+            src: './icons/icon-512.svg',
+            sizes: '512x512',
+            type: 'image/svg+xml',
+            purpose: 'any'
+          },
+          {
+            src: './icons/icon-maskable.svg',
+            sizes: '512x512',
+            type: 'image/svg+xml',
+            purpose: 'maskable'
           }
         ],
         screenshots: [
           {
-            src: '/PWA001/screenshot-desktop.svg',
+            src: './screenshots/desktop.svg',
             sizes: '1920x1080',
             type: 'image/svg+xml',
             form_factor: 'wide',
             label: 'Desktop view of Rainbow Hello World'
           },
           {
-            src: '/PWA001/screenshot-mobile.svg',
+            src: './screenshots/mobile.svg',
             sizes: '1080x1920',
             type: 'image/svg+xml',
             form_factor: 'narrow',
             label: 'Mobile view of Rainbow Hello World'
           }
-        ],
-        categories: ['entertainment', 'education'],
-        prefer_related_applications: false,
-        display_override: ['window-controls-overlay', 'standalone'],
-        handle_links: 'preferred',
-        launch_handler: {
-          client_mode: ['navigate-existing', 'auto']
-        },
-        edge_side_panel: {
-          preferred_width: 480
-        }
+        ]
       },
       workbox: {
-        runtimeCaching: [
-          {
-            urlPattern: /^https:\/\/api\./i,
-            handler: 'NetworkFirst',
-            options: {
-              cacheName: 'api-cache',
-              networkTimeoutSeconds: 10,
-            },
-          }
-        ],
-        cleanupOutdatedCaches: true,
-        sourcemap: true
+        globPatterns: ['**/*.{js,css,html,svg}']
       }
     })
   ]
