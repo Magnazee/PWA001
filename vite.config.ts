@@ -30,31 +30,31 @@ export default defineConfig({
         id: '/PWA001/',
         icons: [
           {
-            src: 'icons/icon-144.png',
+            src: '/PWA001/icons/icon-144.png',
             sizes: '144x144',
             type: 'image/png',
             purpose: 'any'
           },
           {
-            src: 'icons/icon-192-any.svg',
+            src: '/PWA001/icons/icon-192-any.svg',
             sizes: '192x192',
             type: 'image/svg+xml',
             purpose: 'any'
           },
           {
-            src: 'icons/icon-192-maskable.svg',
+            src: '/PWA001/icons/icon-192-maskable.svg',
             sizes: '192x192',
             type: 'image/svg+xml',
             purpose: 'maskable'
           },
           {
-            src: 'icons/icon-512-any.svg',
+            src: '/PWA001/icons/icon-512-any.svg',
             sizes: '512x512',
             type: 'image/svg+xml',
             purpose: 'any'
           },
           {
-            src: 'icons/icon-512-maskable.svg',
+            src: '/PWA001/icons/icon-512-maskable.svg',
             sizes: '512x512',
             type: 'image/svg+xml',
             purpose: 'maskable'
@@ -62,14 +62,14 @@ export default defineConfig({
         ],
         screenshots: [
           {
-            src: 'screenshot-desktop.svg',
+            src: '/PWA001/screenshot-desktop.svg',
             sizes: '1920x1080',
             type: 'image/svg+xml',
             form_factor: 'wide',
             label: 'Desktop view of Rainbow Hello World'
           },
           {
-            src: 'screenshot-mobile.svg',
+            src: '/PWA001/screenshot-mobile.svg',
             sizes: '1080x1920',
             type: 'image/svg+xml',
             form_factor: 'narrow',
