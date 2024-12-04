@@ -9,10 +9,11 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: [
-        'icon-192-any.svg',
-        'icon-192-maskable.svg',
-        'icon-512-any.svg',
-        'icon-512-maskable.svg',
+        'icons/icon-144.png',
+        'icons/icon-192-any.svg',
+        'icons/icon-192-maskable.svg',
+        'icons/icon-512-any.svg',
+        'icons/icon-512-maskable.svg',
         'screenshot-desktop.svg',
         'screenshot-mobile.svg'
       ],
@@ -29,25 +30,31 @@ export default defineConfig({
         id: '/PWA001/',
         icons: [
           {
-            src: 'icon-192-any.svg',
+            src: 'icons/icon-144.png',
+            sizes: '144x144',
+            type: 'image/png',
+            purpose: 'any'
+          },
+          {
+            src: 'icons/icon-192-any.svg',
             sizes: '192x192',
             type: 'image/svg+xml',
             purpose: 'any'
           },
           {
-            src: 'icon-192-maskable.svg',
+            src: 'icons/icon-192-maskable.svg',
             sizes: '192x192',
             type: 'image/svg+xml',
             purpose: 'maskable'
           },
           {
-            src: 'icon-512-any.svg',
+            src: 'icons/icon-512-any.svg',
             sizes: '512x512',
             type: 'image/svg+xml',
             purpose: 'any'
           },
           {
-            src: 'icon-512-maskable.svg',
+            src: 'icons/icon-512-maskable.svg',
             sizes: '512x512',
             type: 'image/svg+xml',
             purpose: 'maskable'
