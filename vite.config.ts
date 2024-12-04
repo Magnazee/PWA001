@@ -9,13 +9,7 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: [
-        'icons/icon-144.png',
-        'icons/icon-192-any.svg',
-        'icons/icon-192-maskable.svg',
-        'icons/icon-512-any.svg',
-        'icons/icon-512-maskable.svg',
-        'screenshot-desktop.svg',
-        'screenshot-mobile.svg'
+        'icons/icon-144.png'
       ],
       manifest: {
         name: 'Rainbow Hello World PWA',
@@ -34,30 +28,6 @@ export default defineConfig({
             sizes: '144x144',
             type: 'image/png',
             purpose: 'any'
-          },
-          {
-            src: '/PWA001/icons/icon-192-any.svg',
-            sizes: '192x192',
-            type: 'image/svg+xml',
-            purpose: 'any'
-          },
-          {
-            src: '/PWA001/icons/icon-192-maskable.svg',
-            sizes: '192x192',
-            type: 'image/svg+xml',
-            purpose: 'maskable'
-          },
-          {
-            src: '/PWA001/icons/icon-512-any.svg',
-            sizes: '512x512',
-            type: 'image/svg+xml',
-            purpose: 'any'
-          },
-          {
-            src: '/PWA001/icons/icon-512-maskable.svg',
-            sizes: '512x512',
-            type: 'image/svg+xml',
-            purpose: 'maskable'
           }
         ],
         screenshots: [
